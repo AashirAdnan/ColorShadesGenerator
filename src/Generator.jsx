@@ -6,7 +6,7 @@ const Generator = () => {
   const [color, setColor] = useState("");
   const [error, setError] = useState(false);
   const [colorError, setColorError] = useState(false);
-  const [list, setList] = useState(new Values("cyan").all(10));
+  const [list, setList] = useState(new Values("purple").all(10));
   const handleColor = (e) => {
     e.preventDefault();
     if (!color) {
@@ -44,13 +44,13 @@ const Generator = () => {
 
         <button
           onClick={handleColor}
-          className="w-full rounded-md bg-cyan-500 p-3 text-white "
+          className="w-full rounded-md bg-purple-500 p-3 text-white "
         >
           Generate
         </button>
       </form>
 
-      <div className="container mx-auto grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {list?.map((item, index) => {
           return (
             <SingleColor index={index} {...item} hex={item.hex} key={index} />
