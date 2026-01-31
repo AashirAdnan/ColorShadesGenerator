@@ -50,7 +50,7 @@ const Generator = () => {
         </button>
       </form>
 
-      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="container mx-auto grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {list?.map((item, index) => {
           return (
             <SingleColor index={index} {...item} hex={item.hex} key={index} />
